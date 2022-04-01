@@ -1,0 +1,6 @@
+{
+  "appId": "cl.snaturales.actividades",
+  "appName": "tvp-activities",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
