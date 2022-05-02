@@ -1,17 +1,17 @@
 <template id="login">
-        <div class="card p-fluid m-5">
+        <div class="md-min-width card m-5">
             <div><img style="width: 80px !important;" alt="icono corporativo" src="@/assets/logo.svg"></div>
                 <!--h5>Ingreso aplicacion de actividades</h5-->
                 <div class="field mt-3">
-                    <label for="username2">Nombre de usuario</label>
+                    <h5 for="username2">Nombre de usuario</h5>
                     <InputText id="username2" type="username" aria-describedby="username2-help" class="p-invalid" v-model="username"/>
-                    <small id="username2-help" class="p-error">Usuario invalido.</small>
+                    <h6 id="username2-help" class="p-error">Usuario invalido.</h6>
                 </div>
                 <div class="field">
-                    <label for="username2">Contraseña</label>
+                    <h5 for="username2">Contraseña</h5>
                     <Password v-model="password" toggleMask/>
                 </div>
-                <buttonp class="w-4 mt-5 p-button-warning" icon="pi pi-users" label="Ingresar" @click.prevent="logIn()"/>
+                <buttonp class="w-8rem mt-5 p-button-warning" icon="pi pi-users" label="Ingresar" @click.prevent="logIn()"/>
         </div>
 </template>
 
@@ -77,7 +77,7 @@
                                         this.$store.dispatch('form/result', result);
                                         this.$router.push({name: 'logout'});
                                 }else{*/
-                                   this.$router.replace({name: 'select-contract'}); 
+                                   this.$router.replace({name: 'home'}); 
                                 //}
                                 this.$store.dispatch('form/submit', false);
                             }).catch((error) => {

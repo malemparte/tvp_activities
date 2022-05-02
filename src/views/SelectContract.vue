@@ -1,7 +1,11 @@
 <template id="select-contract">
     <div class="card p-fluid m-5">
         <h5>Seleccione Contrato</h5>
-        <buttonp class="w-4 mt-5 p-button-warning" icon="pi pi-users" label="Ingresar" @click.prevent="logIn()"/>
+        <span v-for="(c, idx) in contracts" :key="idx">
+            <buttonp class="w-6 mt-5 p-button-warning" :label="c.name" @click.prevent="goTo('home')"/>
+            <br />
+        </span>
+        
     </div>
 </template>
 
